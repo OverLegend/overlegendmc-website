@@ -1,0 +1,114 @@
+$linkSize: 19px;
+
+.navbar {
+  transition: height 0.3s, background-color 0.3s, box-shadow 0.3s;
+  z-index: 100;
+  width: 100vw;
+  height: 80px;
+  background-color: white;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  .logo {
+    margin-left: 1em;
+    display: flex;
+    height: 100%;
+    img {
+      height: 75%;
+      margin: auto;
+    }
+  }
+  .links {
+    height: 100%;
+    margin: auto auto auto 1em;
+    display: flex;
+    a {
+      transition: 0.2s;
+      padding: 0.25em 0;
+      margin: auto 0.5em auto 0.5em;
+      text-decoration: none;
+      font-family: "Roboto";
+      font-weight: 500;
+      font-size: $linkSize;
+      color: #2e2e2e;
+      position: relative;
+      &::before {
+        transition: 0.2s;
+        opacity: 0;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        visibility: hidden;
+        background-color: #2e2e2e;
+        top: 80%;
+      }
+      &:hover::before {
+        transition: 0.2s;
+        opacity: 1;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        visibility: visible;
+        background-color: #2e2e2e;
+        top: 95%;
+      }
+    }
+  }
+  .left {
+    margin: auto 2em auto auto;
+    display: flex;
+    p {
+      margin: auto;
+      text-align: center;
+      font-family: "Montserrat";
+      color: #2e2e2e;
+    }
+  }
+}
+
+.top {
+  transition: 0.3s;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: none;
+  height: 100px;
+  .links a {
+    transition: 0.2s;
+    padding: 0.25em 0;
+    margin: auto 0.5em auto 0.5em;
+    text-decoration: none;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: $linkSize;
+    color: white;
+    position: relative;
+    &::before {
+      transition: 0.2s;
+      opacity: 0;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      visibility: hidden;
+      background-color: white;
+      top: 80%;
+    }
+    &:hover::before {
+      transition: 0.2s;
+      opacity: 1;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      visibility: visible;
+      background-color: white;
+      top: 95%;
+    }
+  }
+  .left p {
+    color: white;
+  }
+}
